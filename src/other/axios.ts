@@ -1,7 +1,7 @@
 import axios from 'axios';
 const token = localStorage.hasOwnProperty('user') ? JSON.parse(localStorage.getItem('user') || '{}').access_token : '';
 const config = {
-    baseURL: 'http://localhost:3006/',
+    baseURL: 'https://quocson.fatcatweb.top/',
     headers: { Authorization: `Bearer ${token}` },
 };
 
