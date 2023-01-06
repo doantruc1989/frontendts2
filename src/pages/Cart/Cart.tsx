@@ -1,6 +1,6 @@
 import React from 'react'
 import './cart.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from "react-use-cart";
 import Navbar2 from '../../components/Navbar/Navbar2';
 
@@ -22,9 +22,14 @@ const Cart = () => {
                 <div className='cart'>
                     {items.map((item) => (
                         <div className="cartItem" key={item.id}>
-                            <img src={item.image} />
+                            <Link to={'/product/' + item.id} className="image">
+                                <img src={item.image} />
+                            </Link>
+
                             <div className="description">
-                                <h1><b>{item.productName}</b></h1>
+                                <h1>
+                                    <b>{item.productName}</b>
+                                </h1>
                                 <p>$ {item.price}</p>
                                 <div className="countHandler">
                                     <button onClick={() => updateItemQuantity(item.id, item.quantity! - 1)}>-</button>
@@ -39,7 +44,7 @@ const Cart = () => {
                     ))}
                 </div>
                 {totalUniqueItems > 0 ? (
-                    <div className="checkout">
+                    <div className="checkouts">
                         <h1>Total: ${cartTotal} </h1>
                         <div>
                             <button className='btn' onClick={() => navigate("/product")}> Continue Shopping </button>
