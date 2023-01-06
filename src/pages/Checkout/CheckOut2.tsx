@@ -9,8 +9,25 @@ import axiosAll from '../../other/axiosAll'
 const CheckOut2 = () => {
     const {
         items,
-        cartTotal
+        cartTotal,
     } = useCart();
+    const navigate = useNavigate();
+
+    const userId = localStorage.hasOwnProperty('user') ? (JSON.parse(localStorage.getItem("user") || '{}')).id : '';
+    const orderItems = JSON.stringify(items);
+
+    const handleClick = () => {
+        try {
+            axiosAll.post('orderitem',
+                JSON.stringify({ orderItems, cartTotal, userId }),
+            );
+            localStorage.removeItem('react-use-cart')
+            navigate("/paysuccessful")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const [isActive1, setActive1] = useState(false);
     const [isActive2, setActive2] = useState(false);
     const [isActive3, setActive3] = useState(false);
@@ -150,6 +167,8 @@ const CheckOut2 = () => {
                                 </div>
                             </div>
                             <Outlet />
+                            <button id="purchase" onClick={() => navigate("/checkout")}>Back to Shipping</button>
+                            <button id="purchase" onClick={handleClick}>Finish</button>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,7 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+
 
 const Creditcard = () => {
-    const navigate = useNavigate();
+
     return (
         <div>
             <h3>Pay by Credit card</h3>
@@ -34,8 +33,6 @@ const Creditcard = () => {
                     <input type="number" />
                 </div>
             </form>
-            <button id="purchase" onClick={() => navigate("/checkout")}>Back to Shipping</button>
-            <button id="purchase" onClick={() => navigate("/paysuccessful")}>Finish</button>
         </div>
     )
 }

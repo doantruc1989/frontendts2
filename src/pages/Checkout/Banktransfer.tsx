@@ -1,8 +1,7 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+
 
 const Banktransfer = () => {
-    const navigate = useNavigate();
+
     return (
         <div>
             <h3>Pay by Banktransfer</h3>
@@ -20,8 +19,7 @@ const Banktransfer = () => {
                     </div>
                 </div>
             </div>
-            <button id="purchase" onClick={() => navigate("/checkout")}>Back to Shipping</button>
-            <button id="purchase" onClick={() => navigate("/paysuccessful")}>Finish</button>
+
         </div>
     )
 }
