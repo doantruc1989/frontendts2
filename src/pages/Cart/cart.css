@@ -109,14 +109,14 @@
     background-color: gray;
 }
 
-.checkout {
+.checkouts {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
 }
 
-.checkout h1 {
+.checkouts h1 {
     margin: 10px 20px;
     padding: 10px 20px;
     font-size: 30px;
@@ -124,7 +124,7 @@
 
 }
 
-.checkout button {
+.checkouts button {
     margin: 10px;
     cursor: pointer;
     color: black;

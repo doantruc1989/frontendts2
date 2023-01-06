@@ -8,6 +8,7 @@ import { AuthProvider } from './other/AuthProvider';
 import reportWebVitals from './reportWebVitals';
 
 
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -16,7 +17,9 @@ root.render(
     <BrowserRouter>
       <AuthProvider>
         <CartProvider>
+
           <App />
+
         </CartProvider>
       </AuthProvider>
     </BrowserRouter>

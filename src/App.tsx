@@ -8,17 +8,22 @@ import Category from './pages/Category/Category';
 import Menu from './components/Menu/Menu';
 import Blogdetail from './pages/Blogdetail/Blogdetail';
 import Cart from './pages/Cart/Cart';
-import CheckOut from './pages/Checkout/CheckOut';
 import Profile from './pages/Profile/Profile'
 import RequireAuth from './other/RequireAuth'
 import Unthorized from './pages/unauthorized/Unthorized';
 import Pagenotfound from './pages/unauthorized/Pagenotfound';
-import Payment from './pages/Payment/Payment';
+// import Payment from './pages/Payment/Payment';
 import Paysuccess from './pages/Payment/Paysuccess';
 import ChangePw from './pages/ChangePw/ChangePw';
 import Forgotpw from './pages/Forgotpw/Forgotpw';
 import UpdateNewPw from './pages/ChangePw/UpdateNewPw';
 import ProductDetail from './pages/Product/ProductDetail';
+import Checkout from './pages/Checkout/CheckOut';
+import CheckOut2 from './pages/Checkout/CheckOut2';
+import Banktransfer from './pages/Checkout/Banktransfer';
+import Creditcard from './pages/Checkout/Creditcard';
+import Momo from './pages/Checkout/Momo';
+import Cod from './pages/Checkout/Cod';
 const ROLES = {
   'User': 'user',
   'Admin': 'admin'
@@ -41,8 +46,17 @@ function App() {
         </Route>
 
         <Route path="/cart" element={<Cart />} />
-        <Route path="/checkout" element={<CheckOut />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout2" element={<CheckOut2 />}>
+          <Route path="cod" element={<Cod />} />
+          <Route path="momo" element={<Momo />} />
+          <Route path="banktrans" element={<Banktransfer />} />
+          <Route path="creditcard" index element={<Creditcard />} />
+        </Route>
+
+        <Route path="/checkout2/banktrans" element={<Banktransfer />} />
+        <Route path="/checkout2/creditcard" element={<Creditcard />} />
+        {/* <Route path="/payment" element={<Payment />} /> */}
         <Route path="/paysuccessful" element={<Paysuccess />} />
         <Route path="/product" element={<Products />} />
         <Route path="/product/:productId" element={<ProductDetail />} />
