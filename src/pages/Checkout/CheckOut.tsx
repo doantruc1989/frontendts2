@@ -4,7 +4,7 @@ import { FaCheck, FaTimes } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from "react-use-cart";
 import axiosAll from '../../other/axiosAll'
-import './checkout.css'
+import './checkout2.css'
 
 const CheckOut = () => {
     const navigate = useNavigate();

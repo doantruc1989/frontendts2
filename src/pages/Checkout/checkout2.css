@@ -1,31 +1,24 @@
 .checkout {
-    min-height: 130vh;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 150px;
 }
 
 .checkout .checkout-container {
     background: white;
-    min-width: 1000px;
-    z-index: 1;
-    box-shadow: 0px 3px 15px -1px rgba(0, 0, 0, 0.2);
+    min-width: 900px;
+    display: flex;
+    margin: 150px 80px 0px 80px;
 }
 
 .checkout .checkout-container .left-col {
     width: 30%;
-    min-width: 240px;
     min-height: 160vh;
-    float: left;
     background: #34495e;
 }
 
 .checkout .checkout-container .left-col .left-col-cont {
     margin: 20px 25px;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .checkout .checkout-container .left-col .left-col-cont h2 {
@@ -41,17 +34,15 @@
 
 .checkout .checkout-container .left-col .left-col-cont .item .img-col {
     width: 30%;
-    float: left;
 }
 
 .checkout .checkout-container .left-col .left-col-cont .item .img-col img {
-    width: 100%;
-    max-height: 100px;
+    width: 70px;
+    height: 70px;
 }
 
 .checkout .checkout-container .left-col .left-col-cont .item .meta-col {
     width: 70%;
-    float: right;
 }
 
 .checkout .checkout-container .left-col .left-col-cont .item .meta-col h3 {
@@ -85,22 +76,10 @@
 
 .checkout .checkout-container .right-col {
     width: 60%;
-    min-width: 310px;
-    height: 100%;
+    min-height: 160vh;
     margin: 20px 25px;
-    float: right;
     color: black;
     font-size: 20px;
-}
-
-.checkout .checkout-container .right-col h2 {
-    float: left;
-    margin: 6px 0 0 0;
-}
-
-
-.checkout .checkout-container .right-col .logotype #mastercard {
-    margin-top: -10px;
 }
 
 .checkout .checkout-container .right-col form {
@@ -126,35 +105,14 @@
     border: none;
     background: none;
     font-size: 20px;
-
 }
 
-.checkout .checkout-container .right-col form select {
+.checkout .checkout-container .right-col form #cardnumber {
     background: white;
     width: 100%;
     padding: 4px 6px;
     border-radius: 3px;
     border: 1px solid lightgrey;
-    font-size: 20px;
-}
-
-
-.checkout .checkout-container form #cardnumber input::-webkit-input-placeholder {
-    opacity: 0.5;
-}
-
-.checkout .checkout-container form #cardnumber input::-moz-placeholder {
-    opacity: 0.5;
-}
-
-.checkout .checkout-container form #cardnumber input[type=number]::-webkit-inner-spin-button,
-.checkout .checkout-container form #cardnumber input [type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.checkout .checkout-container form #cardnumber span.divider {
-    color: rgba(0, 0, 0, .3);
 }
 
 .checkout .checkout-container form label {
@@ -166,56 +124,37 @@
     margin: 14px 0 4px;
 }
 
-.checkout .checkout-container form label#cvc-label i {
-    cursor: pointer;
-    margin-left: 3px;
-}
-
-.checkout .checkout-container form input {
-    display: block;
-    /* padding: 4px 6px; */
-    border: 1px solid lightgrey;
-    border-radius: 2px;
-
-}
-
-.checkout .checkout-container form input:focus {
-    border-color: #e67e22;
-}
-
-.checkout .checkout-container form input::-webkit-input-placeholder {
-    opacity: 0.5;
-}
-
-.checkout .checkout-container form input::-moz-placeholder {
-    opacity: 0.5;
-}
-
-.checkout .checkout-container form input#cardholder {
+.checkout .checkout-container .right-col form select {
+    background: white;
     width: 100%;
-}
-
-.checkout .checkout-container form input#cvc {
-    width: 100%;
-}
-
-/* .creditcardexp {
-    display: flex;
-    align-items: center;
-} */
-
-/* .checkout .checkout-container form select {
+    padding: 4px 6px;
+    border-radius: 3px;
     border: 1px solid lightgrey;
-    border-radius: 2px;
+    font-size: 20px;
+}
+
+.checkout .checkout-container .right-col form #cardnumber {
+    background: white;
+    width: 100%;
+    padding: 4px 6px;
+    border-radius: 3px;
+    border: 1px solid lightgrey;
+}
+
+.checkout .checkout-container .right-col form #cardnumber input {
+    display: inline-block;
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    border: none;
     background: none;
-    width: 90px;
-    font-size: 0.9em;
-    padding: 6px 8px;
-    color: rgba(0, 0, 0, .2);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-} */
+    font-size: 20px;
+
+}
+
+.shipping .radio {
+    display: flex;
+    align-items: baseline;
+}
 
 .checkout .checkout-container form button {
     display: block;
@@ -250,75 +189,6 @@
     margin-top: 40px;
 }
 
-
-
-
-.checkout .checkout-container form p#support {
-    font-size: 0.7em;
-    text-align: center;
-    color: rgba(0, 0, 0, .5);
-}
-
-.checkout .checkout-container form p#support a {
-    text-decoration: none;
-    color: inherit;
-    padding: 0 1px 2px 1px;
-    border-bottom: 1px solid rgba(0, 0, 0, .5);
-}
-
-.left {
-    width: 70%;
-    float: left;
-    clear: both;
-}
-
-.right {
-    width: 30%;
-    float: right;
-    margin-bottom: 25px;
-}
-
-.checkout .checkout-container form p#support a:hover {
-    padding-bottom: 3px;
-}
-
-.shipping .radio {
-    display: flex;
-    align-items: baseline;
-}
-
-.swipeWrapper {
-    padding: 10px;
-    cursor: pointer;
-}
-
-.swipeWrapper:last-of-type {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.swipeWrapper .leftColumn {
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 10px;
-    height: 16px;
-    width: 16px;
-}
-
-.swipeWrapper .leftColumnSpacer {
-    margin-left: 30px;
-}
-
-.right-col .payment-method {
-    display: flex;
-    flex-direction: column;
-}
-
-.right-col .payment-method h3 {
-    margin-top: 30px;
-}
-
 .right-col .payment-method .paymentdto {
     display: flex;
     align-items: center;
@@ -329,7 +199,6 @@
 }
 
 .right-col .payment-method .paymentdto .radio {
-
     background: #f2f4f7;
     border: 2px solid #e8ebed;
     padding: 10px 15px;
