@@ -4,7 +4,10 @@ const Creditcard = () => {
 
     return (
         <div>
-            <h3>Pay by Credit card</h3>
+            <div className="paycreditcard">
+                <h3>Pay by Credit card</h3>
+                <img src="/images/visa.jpg" />
+            </div>
             <form>
                 <label>Cardholder Name:</label>
                 <div id="cardnumber">
