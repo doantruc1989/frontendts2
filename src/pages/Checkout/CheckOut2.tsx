@@ -147,12 +147,12 @@ const CheckOut2 = () => {
                             <div className='paymentdto'>
                                 <div className={isActive1 ? 'radio selected' : 'radio'} onClick={toggleClass1}>
                                     <Link to='cod' className='link'>
-                                        COD
+                                        Pay COD
                                     </Link>
                                 </div>
                                 <div className={isActive2 ? 'radio selected' : 'radio'} onClick={toggleClass2}>
                                     <Link to='momo' className='link'>
-                                        MoMo
+                                        Pay by MoMo
                                     </Link>
                                 </div>
                                 <div className={isActive3 ? 'radio selected' : 'radio'} onClick={toggleClass3}>

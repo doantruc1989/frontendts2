@@ -242,3 +242,13 @@
     display: flex;
     flex-direction: column;
 }
+
+.paycreditcard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.paycreditcard img {
+    height: 40px;
+    width: auto;
+}
