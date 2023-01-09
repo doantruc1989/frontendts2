@@ -68,6 +68,7 @@
     text-align: left;
     font-size: 2em;
     margin: 0;
+    margin-bottom: 50px;
 }
 
 .checkout .checkout-container .left-col .left-col-cont .total-price span {
@@ -118,7 +119,7 @@
 .checkout .checkout-container form label {
     display: block;
     font-family: 'Lato', sans-serif;
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: 600;
     text-transform: uppercase;
     margin: 14px 0 4px;
@@ -131,6 +132,7 @@
     border-radius: 3px;
     border: 1px solid lightgrey;
     font-size: 20px;
+    color: black !important;
 }
 
 .checkout .checkout-container .right-col form #cardnumber {
